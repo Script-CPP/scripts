@@ -1,0 +1,16 @@
+My system had trouble installing pwntools using pip3
+This solution fixed the problem
+
+Source: https://askubuntu.com/questions/969463/python3-pip3-install-broken-on-ubuntu
+
+
+sudo apt purge python3-pip  
+sudo rm -rf '/usr/lib/python3/dist-packages/pip'  
+sudo apt install python3-pip   
+cd
+cd .local/lib/python3/site-packages
+sudo rm -rf pip*  
+cd
+cd .local/lib/python3.5/site-packages
+sudo rm -rf pip*  
+sudo pip3 install xlwt

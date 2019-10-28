@@ -1,0 +1,7 @@
+shellcraft i386.linux.sh -f asm
+shellcraft i386.linux.sh -f elf > sh
+asm nop
+asm 'mov eax, 0xdeadbeef'
+xxd -p /bin/cat | disasm
+checksec /bin/cat
+process('/bin/bash')
